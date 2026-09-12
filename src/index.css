@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  background-color: #05070b;
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  background-color: #05070b;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Dampens the CSS-driven ambient motion (pulses, hover transitions, smooth
+   scroll) for users who ask for reduced motion. Note this does NOT stop the
+   Framer Motion loops — those are JS-driven. See the README if you want to
+   wire those up too. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Minimal dark scrollbar — Chrome / Safari / Edge */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #05070b;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border: 3px solid #05070b;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 163, 224, 0.55);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.12) #05070b;
+}
+
+/* Keyboard focus ring in United blue — the SVG map nodes are tabbable */
+:focus-visible {
+  outline: 2px solid #00a3e0;
+  outline-offset: 3px;
+  border-radius: 4px;
+}

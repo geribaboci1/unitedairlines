@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Beyond The Horizon — A Narrative Campaign Proposal for United Airlines</title>
+    <meta
+      name="description"
+      content="A narrative campaign proposal by @legefilms. Three global chapters out of United's hub system — Bari, Marrakech and Auckland — as three cinematic hero films and nine ambient experience reels built around the premium cabin journey."
+    />
+
+    <!-- Paint the page charcoal before React mounts: no white flash -->
+    <meta name="theme-color" content="#05070B" />
+    <meta name="color-scheme" content="dark" />
+
+    <!-- Keep this proposal out of search results while it's confidential.
+         Delete this line if you ever want it publicly indexed. -->
+    <meta name="robots" content="noindex, nofollow" />
+
+    <!-- Link preview (iMessage / Slack / email).
+         og:image must be an ABSOLUTE url — most scrapers will not resolve a
+         relative path. Update this domain if you attach a custom domain. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Beyond The Horizon" />
+    <meta
+      property="og:description"
+      content="A Narrative Campaign Proposal by @legefilms — prepared for United Airlines Marketing."
+    />
+    <meta
+      property="og:image"
+      content="https://unitedairlines-b09.pages.dev/assets/destination-bri.jpg"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Beyond The Horizon" />
+    <meta
+      name="twitter:description"
+      content="A Narrative Campaign Proposal by @legefilms — prepared for United Airlines Marketing."
+    />
+    <meta
+      name="twitter:image"
+      content="https://unitedairlines-b09.pages.dev/assets/destination-bri.jpg"
+    />
+
+    <!-- These MUST be root-absolute (/foo), not relative (./foo). Vite tries to
+         resolve <link href> at build time relative to index.html; files in
+         public/ aren't there, so "./favicon.svg" fails the build outright. -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/assets/creator-profile.jpg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Applies before the CSS bundle parses — prevents a white flash on load */
+      html,
+      body {
+        background-color: #05070b;
+        margin: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <noscript>
+      <div style="color: #94a3b8; font-family: sans-serif; padding: 48px; text-align: center">
+        This proposal requires JavaScript. Please enable it, or request the PDF one-sheet.
+      </div>
+    </noscript>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
